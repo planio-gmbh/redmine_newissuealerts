@@ -1,18 +1,12 @@
 <h2><%= l(:newissuealerts_edit, :project => @project.name) %></h2>
 <% form_for :newissuealert, @newissuealert , :url => { :project_id => @project.identifier, :id => @newissuealert.id }do |f| %>
   <%= f.error_messages %>
-<div class="box tabular settings">
-  <p>
-    <%= f.label l(:email_addresses) %> <%= f.text_field :mail_addresses, :size => 60 %><br />
-    <em><%= l(:email_addresses_comma_separated) %></em>
-  </p>
-  <p>
-   <%= f.label l(:enabled) %> <%= f.check_box :enabled %> 
-  </p>
-  <p>
-    <%= f.label l(:newissuealerts_set_priority) %> <%= f.check_box :priority %>
-  </p>
-  <p>  <%= submit_tag l(:save), :name => "save" %> <%= submit_tag l(:delete), :name => "delete", :confirm => l(:newissuealerts_deletion_confirm) %> </p>
-</div>
+  <div class="box tabular settings">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <p>
+      <%= submit_tag l(:save), :name => "save" %>
+      <%= submit_tag l(:delete), :name => "delete", :confirm => l(:newissuealerts_deletion_confirm) %>
+    </p>
+  </div>
 <% end %>
 

@@ -4,13 +4,13 @@ de:
   newissuealert_menuitem: Ticketalarm
   #edit view
   newissuealerts_edit: Ticketalarme bearbeiten für <em>{{project}}</em>
-  email_addresses: E-Mailadressen
+  field_mail_addresses: E-Mailadressen
   email_addresses_comma_separated: E-Mailadressen werden mit Komma getrennt
   newissuealerts_deletion_confirm: Möchten Sie diesen Eintrag wirklich löschen?
   save: Speichern
   delete: Löschen
-  enabled: Aktiviert
-  newissuealerts_set_priority: Priority
+  field_enabled: Aktiviert
+  field_priority: Hohe Priorität
   # new view
   newissuealerts_new: Ticketalarm erstellen für <em>{{project}}</em>
   create: Anlegen
