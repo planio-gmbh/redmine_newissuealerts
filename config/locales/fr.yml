@@ -2,7 +2,7 @@ fr:
   #menu entry
   newissuealert_menuitem: Email on New Issue
   #edit view
-  newissuealerts_edit: Edition de New Issue Alert pour <em>{{project}}</em>
+  newissuealerts_edit: Edition de New Issue Alert pour <em>%{project}</em>
   field_mail_addresses: Adresses Emails
   email_addresses_comma_separated: Les emails sont s&eacute;par&eacute;s par des virgules
   newissuealerts_deletion_confirm: Etes-vous s&ucirc;r de vouloir &eacute;ffacer cette alerte?
@@ -11,10 +11,10 @@ fr:
   field_enabled: Actif
   field_priority: Priorit&eacute;
   # new view
-  newissuealerts_new: Cr&eacute;ation d&#39;une New Issue Alert pour <em>{{project}}</em>
+  newissuealerts_new: Cr&eacute;ation d&#39;une New Issue Alert pour <em>%{project}</em>
   create: Cr&eacute;er
   # index view
-  newissuealerts_index: Liste des New Issue Alert pour <em>{{project}}</em>
+  newissuealerts_index: Liste des New Issue Alert pour <em>%{project}</em>
   edit_delete: Editer/Effacer
   newissuealerts_text: Cr&eacute;er une New Issue Alert
   # controller

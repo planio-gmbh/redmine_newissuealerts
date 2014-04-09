@@ -1,21 +1,22 @@
-<% can_new = User.current.allowed_to?(:new_newissuealerts, @project) 
-can_edit = User.current.allowed_to?(:edit_newissuealerts, @project)
-%>
-<h2><%= l(:newissuealerts_index, :project => @project.name) %></h2>
-<% if can_new %>
-<p>
-<%= link_to(l(:newissuealerts_text), {:controller => 'newissuealerts', :action => 'new', :project_id => @project.identifier}, :class => 'icon icon-add' ) %> 
-</p>
+<h2><%= raw l :newissuealerts_index, :project => h(@project.name) %></h2>
+
+<% if authorize_for :newissuealerts, :new %>
+  <p>
+  <%= link_to(l(:newissuealerts_text), new_newissuealert_path(@project), :class => 'icon icon-add' ) %>
+  </p>
 <% end %>
-<% @newissuealerts = Newissuealert.find(:all, :conditions => { :project_id => @project.id } ) %>
-<% for newissuealert in @newissuealerts %> 
-<div class="box tabular settings">
-<p><label><%= l(:field_mail_addresses) %>:</label> <%= newissuealert.mail_addresses %></p>
-<p><label><%= l(:field_enabled) %>:</label> <%= newissuealert.enabled ? l(:general_text_yes) : l(:general_text_no) %></p>
-<p><label><%= l(:field_priority) %>:</label> <%= newissuealert.priority ? l(:general_text_yes) : l(:general_text_no) %></p>
-<% if can_edit %>
-<p><%= link_to l(:edit_delete), {:controller => 'newissuealerts', :action => 'edit', :id => newissuealert.id, :project_id => @project.identifier } %></p>
+
+<% for alert in @project.newissuealerts %>
+  <div class="box tabular settings">
+    <p><label><%= l(:field_mail_addresses) %>:</label> <%= alert.mail_addresses %></p>
+    <p><label><%= l(:field_enabled) %>:</label> <%= alert.enabled ? l(:general_text_yes) : l(:general_text_no) %></p>
+    <p><label><%= l(:field_priority) %>:</label> <%= alert.priority ? l(:general_text_yes) : l(:general_text_no) %></p>
+    <% if authorize_for :newissuealerts, :edit %>
+      <p>
+      <%= link_to l(:button_edit), edit_newissuealert_path(@project, alert), :class => 'icon icon-edit' %>
+      <%= delete_link newissuealert_path(@project, alert) %>
+      </p>
+    <% end %>
+  </div>
 <% end %>
-</div>
-<% end %> 
 

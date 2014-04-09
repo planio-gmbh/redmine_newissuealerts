@@ -1,5 +1,5 @@
-<h2><%= l(:newissuealerts_new, :project => @project.name) %></h2>
-<% form_for :newissuealert, @newissuealert, :url => { :project_id => @project.identifier } do |f| %>
+<h2><%= raw l :newissuealerts_new, :project => h(@project.name) %></h2>
+<%= labelled_form_for @newissuealert, url: newissuealerts_path(@project) do |f| %>
   <%= error_messages_for 'newissuealert' %>
   <div class="box tabular settings">
     <%= render :partial => 'form', :locals => { :f => f } %>
@@ -7,4 +7,4 @@
       <%= f.submit l(:create) %>
     </p>
   </div>
-<% end %> 
+<% end %>
