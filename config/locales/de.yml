@@ -10,7 +10,6 @@ de:
   save: Speichern
   delete: Löschen
   field_enabled: Aktiviert
-  field_priority: Hohe Priorität
   # new view
   newissuealerts_new: Ticketalarm erstellen für <em>%{project}</em>
   create: Anlegen

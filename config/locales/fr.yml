@@ -9,7 +9,6 @@ fr:
   save: Sauvegarder
   delete: Effacer
   field_enabled: Actif
-  field_priority: Priorit&eacute;
   # new view
   newissuealerts_new: Cr&eacute;ation d&#39;une New Issue Alert pour <em>%{project}</em>
   create: Cr&eacute;er

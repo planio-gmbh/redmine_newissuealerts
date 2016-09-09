@@ -10,7 +10,6 @@ en:
   save: Save
   delete: Delete
   field_enabled: Enabled
-  field_priority: Priority
   # new view
   newissuealerts_new: Creating a New Issue Alert for <em>%{project}</em>
   create: Create

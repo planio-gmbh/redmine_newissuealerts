@@ -10,7 +10,6 @@ nl:
   save: Opslaan
   delete: Verwijderen
   field_enabled: Actief
-  field_priority: Priority
   # new view
   newissuealerts_new: Aanmaken Nieuwe Issues Notificatie voor <em>%{project}</em>
   create: Aanmaken
